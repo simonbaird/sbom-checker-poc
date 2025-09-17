@@ -1,2 +1,8 @@
 # sbom-checker-poc
-POC for using Conforma to do policy checks on SBOMs
+
+Experimenting with using [Conforma](https://conforma.dev/) to perform policy
+checks on SBOMs.
+
+## See also
+
+* [TC-2808](https://issues.redhat.com/browse/TC-2808)
