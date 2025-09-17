@@ -5,6 +5,7 @@ checks on SBOMs.
 
 ## Requirements
 
+* [conforma](https://github.com/conforma/cli)
 * [cosign](https://github.com/sigstore/cosign)
 * [skopeo](https://github.com/containers/skopeo)
 

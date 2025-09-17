@@ -1,0 +1,11 @@
+---
+sources:
+  - policy:
+      # It's a bit clunky, but this so we can use lib.result_helper.
+      # If we do it like this it fetches every time which is slow:
+      - github.com/conforma/policy//policy/lib
+      # ...so for speed you could use a nearby checked out repo:
+      #- ../policy/policy/lib
+
+      # The location of the policies here in this repo
+      - ./policy

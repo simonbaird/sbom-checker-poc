@@ -10,3 +10,8 @@ fetch-sboms:
 	@for ref in $(REFS); do\
 	  bin/fetch-sbom.sh $$ref; \
 	done
+
+check-sboms:
+	@for sbom in sboms/*.json; do\
+	  bin/check-sbom.sh $$sbom; \
+	done
