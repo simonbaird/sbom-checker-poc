@@ -24,3 +24,4 @@ make check-sboms
 ## See also
 
 * [TC-2808](https://issues.redhat.com/browse/TC-2808)
+* [interlynk-io/sbomqs](https://github.com/interlynk-io/sbomqs)
