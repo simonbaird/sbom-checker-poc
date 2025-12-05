@@ -16,4 +16,5 @@ fetch-sboms:
 check-sboms:
 	@for sbom in sboms/*.json; do\
 	  bin/check-sbom.sh $$sbom; \
+	  echo ""; \
 	done
