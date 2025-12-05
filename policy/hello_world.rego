@@ -2,7 +2,7 @@
 # METADATA
 # title: My first hello world
 # description: >-
-#   Not a serious policy, but something to show what a Conforma style
+#   Not a serious policy, but something to show what a Conforma-style
 #   policy package looks like
 #
 package hello_world

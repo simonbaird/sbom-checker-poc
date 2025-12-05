@@ -5,12 +5,14 @@ REFS=\
  registry.redhat.io/rhtas/ec-rhel9:0.6 \
  registry.redhat.io/rhtas/ec-rhel9:0.5
 
+# Download some SBOMs
 .PHONY=fetch-sboms
 fetch-sboms:
 	@for ref in $(REFS); do\
 	  bin/fetch-sbom.sh $$ref; \
 	done
 
+# Run policy checks on the downloaded SBOMs
 check-sboms:
 	@for sbom in sboms/*.json; do\
 	  bin/check-sbom.sh $$sbom; \
