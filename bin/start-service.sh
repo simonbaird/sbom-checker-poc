@@ -9,6 +9,6 @@ set -euo pipefail
 
 ec validate input \
   --server \
-  --policy "${2:-policy.yaml}" \
+  --policy policy.yaml \
   --show-successes \
   --info
