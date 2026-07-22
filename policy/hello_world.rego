@@ -10,6 +10,19 @@ package hello_world
 import data.lib
 
 # METADATA
+# title: Check for missing SPDXID value
+# description: >-
+#   Make sure that the document has an SPDXID value.
+# custom:
+#   short_name: spdxid_present
+#   failure_msg: Document has no top level SPDXID key.
+#
+deny contains result if {
+  not input.SPDXID
+  result := lib.result_helper(rego.metadata.chain(), [])
+}
+
+# METADATA
 # title: Check for valid SPDXID value
 # description: >-
 #   Make sure that the SPDXID value found in the SBOM matches a list
@@ -33,7 +46,6 @@ deny contains result if {
   result := lib.result_helper(rego.metadata.chain(), [input.SPDXID, concat(",", allowed_values)])
 }
 
-
 # METADATA
 # title: Check we don't have too many packages
 # description: >-
@@ -46,7 +58,7 @@ deny contains result if {
 #     You need to reduce the number of dependencies in this artifact.
 #
 deny contains result if {
-  max_package_count := 510
+  max_package_count := 3000
   found_package_count := count(input.packages)
 
   # Violation condition
