@@ -14,4 +14,4 @@ SBOM_FILE="${OUTPUT_DIR}/$(echo "$PINNED_REF" | sed 's/[\/@:]/__/g').json"
 
 # Download the sbom
 mkdir -p "$OUTPUT_DIR"
-cosign download sbom "$PINNED_REF" > "$SBOM_FILE"
+cosign download sbom "$PINNED_REF" | jq > "$SBOM_FILE"
